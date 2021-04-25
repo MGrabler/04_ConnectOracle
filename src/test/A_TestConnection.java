@@ -47,6 +47,7 @@ public class A_TestConnection
 			System.out.println("getClientInfo() = "+ con.getClientInfo());
 			System.out.println("getTypeMap() = "+ con.getTypeMap());
 			System.out.println("getWarnings() = "+ con.getWarnings());
+			System.out.println("getAutoCommit() = "+ con.getAutoCommit());
 			
 			System.out.println("---------------------------------------------------------");
 			

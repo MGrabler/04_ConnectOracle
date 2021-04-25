@@ -13,7 +13,7 @@ public class OracleConnection
 	public OracleConnection() throws BankAccountException
 	{
 		try
-		{
+		{	// Load the jdbc driver
 			Class.forName("oracle.jdbc.OracleDriver");
 		}
 		catch(ClassNotFoundException e)
@@ -24,8 +24,9 @@ public class OracleConnection
 	public void open() throws BankAccountException
 	{
 		try
-		{
+		{	// Open the database and AutoCommit off
 			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:ORCL", "DEMO", "oracle");
+			con.setAutoCommit(false);
 		}
 		catch(SQLException e)
 		{
@@ -35,7 +36,7 @@ public class OracleConnection
 	public void close() throws BankAccountException
 	{
 		try
-		{
+		{	// Close the database and AutoCommit off
 			con.close();
 		}
 		catch(SQLException e)
