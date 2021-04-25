@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+// Datentype auf das wesendliche reduzieren
 public class Bank
 {
 	private List<BankAccount> accounts;
